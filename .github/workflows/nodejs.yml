@@ -20,11 +20,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install, build, and zip
       run: |
         npm ci
         npm run build
         npm run zip-ci:dev
+        ls
       env:
         CI: true
     - name: upload to chrome store
