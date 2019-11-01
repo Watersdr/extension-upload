@@ -10,6 +10,7 @@
     "build-zip": "node scripts/build-zip.js",
     "build:zip": "node scripts/build-zip.js",
     "zip": "node scripts/build-zip.js",
+    "zip-ci:dev": "node scripts/build-zip.js develop",
     "start": "npm run build:dev -- --watch",
     "version": "npm version --no-git-tag-version",
     "version-major": "npm run version major && node scripts/version.js major",
