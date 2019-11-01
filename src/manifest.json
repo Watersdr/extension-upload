@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "Test upload",
+  "short_name": "Test",
+  "description": "Testing upload to chrome store",
+  "version": "0.0.1",
+  "author": "watersdr",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://google.com/*"
+      ],
+      "js": [
+        "content/content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon32.png",
+    "default_title": "Donnie Test"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "unlimitedStorage",
+    "tabs"
+  ],
+  "web_accessible_resources": [
+    "content/*",
+    "fonts/*",
+    "icons/*"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@vue/babel-preset-jsx"
+  ],
+  "plugins": [
+    "jsx-event-modifiers",
+    "jsx-v-model",
+    "transform-vue-jsx",
+    [
+      "@babel/plugin-proposal-object-rest-spread",
+      {
+        "useBuiltIns": false
+      }
+    ],
+    [
+      "@babel/plugin-transform-async-to-generator",
+      {
+        "useBuiltIns": false
+      }
+    ],
+    [
+      "@babel/plugin-transform-modules-umd",
+      {
+        "globals": {
+          "es6-promise": "Promise"
+        }
+      }
+    ],
+    "@babel/plugin-transform-runtime"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["module-resolver", {
+          "alias": {
+            "name": "./path/to/name"
+          }
+        }]
+      ]
+    }
+  }
+}

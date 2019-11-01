@@ -1,0 +1,50 @@
+@import '~base-styles';
+
+.extension-content-wrapper {
+  background: white;
+
+    // positioning
+  position: fixed;
+  right: 20px;
+  // left: 20px;
+  top: 20px;
+  z-index: 10000;
+
+  &__border {
+    border-color: $primary;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+
+    box-shadow: 0 0 11px 11px rgba(0, 0, 0, 0.1);
+  }
+
+  &__found {
+    background: $primary;
+    border-color: white;
+  }
+}
+
+@font-face {
+  font-family: element-icons;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/element-icons.woff') format("woff"),
+       url('chrome-extension://__MSG_@@extension_id__/fonts/element-icons.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flex-row {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
